@@ -4,7 +4,7 @@ export const typeDefs = gql`
   scalar DateTime
 
   type Query {
-    avos: [Avocado]!
+    avos(skip: Int, take: Int, where: AvocadoWhereInput): [Avocado]!
     avo(id: ID!): Avocado
   }
 
@@ -47,5 +47,24 @@ export const typeDefs = gql`
     shape: String
     hardiness: String
     taste: String
+  }
+
+  input AvocadoWhereInput {
+    name: StringFilterInput
+    price: Float
+  }
+
+  input StringFilterInput {
+    equals: String
+    in: [String]
+    notIn: [String]
+    lt: String
+    lte: String
+    gt: String
+    gte: String
+    contains: String
+    startsWith: String
+    endsWith: String
+    not: String
   }
 `

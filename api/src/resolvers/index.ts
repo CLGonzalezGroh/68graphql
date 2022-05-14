@@ -1,5 +1,5 @@
-import * as avo from './modules/avocado/avocado.resolvers'
-import * as scalar from './modules/base/scalars.model'
+import * as avo from './avocado.resolvers'
+import * as scalar from './scalars'
 export const resolvers = {
   ...scalar,
   Query: {
