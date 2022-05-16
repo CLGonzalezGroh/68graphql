@@ -8,6 +8,9 @@
     "client",
     "packages/*"
   ],
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {},
   "author": "@jonalvarezz",
   "license": "MIT",
